@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+
+.my-header{
+    margin: 40px;
+    background-color: rgb(37, 37, 37);
+    border-radius: 50px;
+}
+
+
+.my-a-btn{
+    margin: 0px 15px;
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    border: 2px solid transparent;
+    padding: 11px 25px;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+
+.my-a-btn:hover{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.my-card{
+    background-color: rgb(37, 37, 37);
+    border-radius: 50px;
+    color: white;
+}
+
+.my-card-body{
+    padding: 20px 30px;
+}
+
+.my-card img{
+    margin: 30px 0px;
+    width: 100%
+}
