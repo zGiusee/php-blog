@@ -58,7 +58,7 @@ if (isset($_SESSION['user_id'])) {
                                     <input type="hidden" value="<?php echo $post['id'] ?>" id="update_post_id" name="update_post_id">
                                     <button type="submit" class="my-a-btn">Modifica</button>
                                 </form>
-                                <button class="my-a-btn" type="button" data-bs-toggle="modal" data-bs-target="#delete_modal" data-postid="<?php echo $post['id'] ?>" data-title="<?php echo $post['title'] ?>" class="btn btn-danger delete-button">
+                                <button class="my-a-btn delete-button" type="button" data-bs-toggle="modal" data-bs-target="#delete_modal" data-postid="<?php echo $post['id'] ?>" data-title="<?php echo $post['title'] ?>" class="btn btn-danger delete-button">
                                     Elimina
                                 </button>
                             </div>

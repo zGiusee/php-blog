@@ -14,13 +14,15 @@ if ($conn->connect_error) {
 }
 
 if (isset($_POST['title']) && isset($_POST['content']) && isset($_POST['image']) && isset($_POST['category'])) {
+
+    // Recupero i dati dalla form
     $user_id = $_SESSION['user_id'];
     $title = $_POST['title'];
     $content = $_POST['content'];
     $image = $_POST['image'];
     $category = $_POST['category'];
 
-
+    // Creo la query
     $create_sql =
         "INSERT INTO posts (title, content, image, user_id, category_id)
         VALUES ('$title', '$content', '$image', '$user_id', '$category')";
@@ -59,6 +61,7 @@ if (isset($_POST['title']) && isset($_POST['content']) && isset($_POST['image'])
         <div class="container my-5">
             <div class="row justify-content-center">
                 <div class="col-md-6">
+                    <!-- Post Form -->
                     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                         <div class="form-group mt-2">
                             <label class="fw-bold" for="title">Titolo * :</label>

@@ -2,10 +2,9 @@
 session_start();
 
 require_once __DIR__ . '/db/db_connection.php';
-var_dump($_GET['post_id']);
 
 if (isset($_GET['post_id'])) {
-
+    // Recupero l'id dalla form (input invisibile)
     $post_id = $_GET['post_id'];
 
     $sql =
@@ -16,6 +15,7 @@ if (isset($_GET['post_id'])) {
 
     $stmt->bind_param("i", $post_id);
 
+    // Se la query va a buon fine, esegue un redirect
     if ($stmt->execute() === TRUE) {
         header('Location: ./index.php');
     } else {

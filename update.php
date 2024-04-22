@@ -36,6 +36,7 @@ if (isset($_GET['update_post_id'])) {
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Recuper i dati dalla form
     $post_id = $_POST['post_id'];
     $title = $_POST['title'];
     $content = $_POST['content'];
@@ -43,7 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $category = $_POST['category_id'];
 
     $stmt = $conn->prepare("UPDATE posts SET title=?, content=?, image=?, category_id=? WHERE id=?");
-
 
     $stmt->bind_param("sssii", $title, $content, $image, $category, $post_id);
 
@@ -55,9 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $conn->close();
 }
-
-
-
 
 ?>
 
